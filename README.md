@@ -25,3 +25,7 @@ In `/usr/local/etc/ssh/sshd_config` set `UsePAM yes`. Put `HostKey /etc/ssh_host
 ## rsync
 
 Same as the core formula, with the download URLs fixed. The tarballs are under `.../pub/rsync/src/`, and the old URL and both mirrors return 404.
+
+## smartmontools
+
+Version 6.6 instead of 7.x. Starting with 7.0, smartmontools needs C++11, and Xcode 3.1 has only gcc 4.0/4.2; 6.6 still builds as C++98. Tested on a Mac mini G4: `smartctl -A /dev/disk0` reads SMART from the internal ATA disk, including temperature.
