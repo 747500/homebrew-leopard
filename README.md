@@ -21,3 +21,7 @@ Replacing Apple's sshd:
 In `/usr/local/etc/ssh/sshd_config` set `UsePAM yes`. Put `HostKey /etc/ssh_host_rsa_key` first, so clients' known_hosts stay valid.
 
 `brew upgrade openssh` removes the keg for the whole build, about 12 minutes on a G4. New ssh connections are refused until the build finishes, so keep a session open.
+
+## rsync
+
+Same as the core formula, with the download URLs fixed. The tarballs are under `.../pub/rsync/src/`, and the old URL and both mirrors return 404.
